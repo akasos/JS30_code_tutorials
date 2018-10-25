@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML5 Canvas</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
+<p class="instruction-text">Hold the mouse down to start drawing.<p>
 <canvas id="draw" width="800" height="800"></canvas>
 
 <script>
@@ -66,7 +68,28 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
 
 <style>
   html, body {
+    min-width: 100vw;
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
+  }
+
+  .instruction-text {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    border: 1px solid blue;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+  }
+  #draw {
+    position: relative;
+    border: 1px solid red;
   }
 </style>
 
