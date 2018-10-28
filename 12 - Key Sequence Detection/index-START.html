@@ -6,7 +6,39 @@
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
 </head>
 <body>
+
+  <p class="instruction-text">Type in the key sequence 'austin' and watch what happens</p>
+
+  <style>
+    .instruction-text {
+      font-size: 1.5em;
+      text-align: center;
+      position: absolute; 
+      left: 0; 
+      right: 0; 
+      top: 20%;
+      margin-left: auto; 
+      margin-right: auto; 
+      width: 700px; /* Need a specific value to work */
+    }
+  </style>
+
 <script>
+  const pressed = [];
+  const secretCode = 'austin';
+
+window.addEventListener('keyup', (e) => {
+  pressed.push(e.key);
+  pressed.splice(-secretCode - 1, pressed.length - secretCode.length);
+  console.log(pressed);
+
+if(pressed.join('').includes(secretCode))
+{
+  cornify_add();
+  console.log("DING DING");
+}
+
+});
 </script>
 </body>
 </html>

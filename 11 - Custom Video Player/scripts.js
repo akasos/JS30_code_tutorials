@@ -50,7 +50,8 @@ function scrub(e)
 
 function fullScreenView()
 {
-    player.classList.add('fullscreen');
+    player.fullScreen = true;
+    console.log('what');
 }
 
 /* Hook up the event listeners */
@@ -78,4 +79,4 @@ progress.addEventListener('mousemove', scrub);
 progress.addEventListener('mousedown', () => isScrubbing = true);
 progress.addEventListener('mouseup', () => isScrubbing = false);
 
-fullScreen.addEventListener('fullscreenchange', fullscreen);
+fullScreen.addEventListener('click', fullScreenView);
