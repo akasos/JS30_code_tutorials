@@ -28,6 +28,7 @@ html {
 .photo {
   width: 100%;
   float: left;
+  border: 1px solid blue;
 }
 
 .player {
@@ -43,6 +44,7 @@ html {
 
 .strip {
   padding: 2rem;
+  border: 1px solid red;
 }
 
 .strip img {
