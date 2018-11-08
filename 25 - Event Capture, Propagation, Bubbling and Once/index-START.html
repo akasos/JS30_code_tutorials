@@ -46,7 +46,7 @@
   
   function logText(e) {
     console.log(this.classList.value)
-    e.stopPropagation();
+    e.stopPropagation(); //stop bubbling or capture
   }
 
   divs.forEach(div => div.addEventListener('click', logText, {capture: false})); //captures goes down, bubbling goes up
